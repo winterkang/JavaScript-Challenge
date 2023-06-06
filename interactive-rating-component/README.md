@@ -13,9 +13,18 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 </br>
 
-### ✅ Screenshot
+### ✅ Screenshot 
 
 ![](/interactive-rating-component/images/screenshot.gif)
+
+<details>
+<summary>image</summary>
+
+![](/interactive-rating-component/images/main-page.png)
+![](/interactive-rating-component/images/selected.png)
+![](/interactive-rating-component/images/submitted.png)
+
+</details>
 
 </br>
 
