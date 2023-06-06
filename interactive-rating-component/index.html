@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+    <div class="box1">
+      <span><img src="images/icon-star.svg" alt=""></span>
+      <h2 class="box1-title">How did we do?</h2>
+
+      <p class="box1-para">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p> 
+
+      <div class="number-box">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+      </div>
+
+      <button class="submit">SUBMIT</button>  
+    </div>
+    
+    <div class="box2 hidden">
+      <!-- Rating state end -->
+      <img src="images/illustration-thank-you.svg" alt="">
+      <!-- Thank you state start -->
+
+      <p class="score"><span class="result"></span> </p> 
+
+      <h2 class="thank-you">Thank you!</h2>
+
+      <p class="box2-para">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p> 
+      <!-- Thank you state end -->
+      <button class="go-back">Go Back</button>  
+    </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Daeun Kang</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

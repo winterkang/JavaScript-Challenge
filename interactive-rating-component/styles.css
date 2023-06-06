@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* desktop version */
+.box1{
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);;
+  border-radius:30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 412px;
+  height: 416px;
+  padding: 32px;
+}
+.box1 span{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213, 19%, 18%);
+  margin-bottom: 23px;
+}
+.box1-title{
+  margin-bottom: 22px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+.box1-para{
+  margin-bottom: 24px;
+  color: hsl(217, 12%, 63%);
+  width: 340px;
+  height: 72px;
+  text-align: left;
+}
+.number-box{
+  display: flex;
+  justify-content: space-between;
+  width: 341px;
+  height: 51px;
+  margin-bottom: 32px;
+}
+.number-box button{
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 18%);
+  border: none;
+  color: hsl(217, 12%, 63%);
+  transition: 0.3s;
+}
+.number-box button:focus{
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+.number-box button:hover{
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.submit{
+  width: 341px;
+  height: 45px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  border: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.submit:hover{
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+/* 두번째 페이지 */
+.box2 {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);;
+  border-radius:30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 412px;
+  height: 416px;
+  padding: 32px;
+}
+.box2 img{
+  width: 162px;
+  height: 108px;
+  margin-bottom: 32px;
+}
+.score{
+  width: 193px;
+  height: 32px;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 32px;
+}
+.thank-you{
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+.box2-para{
+  width: 340px;
+  height: 72px;
+  text-align: center;
+  color: hsl(217, 12%, 63%);
+}
+
+.go-back{
+  width: 341px;
+  height: 45px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  border: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.go-back:hover{
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+/* 숨김표시 */
+.hidden{
+  display: none;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/* mobile version */
+@media screen and (max-width: 375px) {
+  .box1{
+    width: 327px;
+    height: 360px;
+    padding: 15px;
+    border-radius: 25px;
+  }
+  .box1-para{
+    width: 300px;
+  }
+  .number-box{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 51px;
+    margin-bottom: 32px;
+  }
+  .number-box button{
+    width: 41px;
+    height: 41px;
+  }
+  .submit{
+    width: 300px;
+  }
+
+  .box2 {
+    width: 327px;
+    height: 360px;
+    padding: 15px;
+    border-radius: 25px;
+  }
+  .box2 img{
+    width: 142px;
+    height: 88px;
+    margin-bottom: 15px;
+  }
+  .score{
+    width: 193px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  .box2-para{
+    width: 300px;
+    margin-bottom: 15px;
+  }
+  
+  .go-back{
+    width: 300px;
+  }
+
+  .hidden{
+    display: none;
+  }
+}
