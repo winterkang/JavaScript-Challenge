@@ -15,7 +15,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### ✅ Screenshot
 
-![](/images/screenshot.gif)
+![](/interactive-rating-component/images/screenshot.gif)
 
 </br>
 
