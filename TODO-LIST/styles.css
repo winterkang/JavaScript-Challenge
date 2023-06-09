@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.container{
+  width: 500px;
+  height: 550px;
+  border: 2px solid #ACBB78;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  margin: 40px 0 50px 0;
+  font-size: 30px;
+  color: #649173;
+}
+.input-form{
+  margin-bottom: 15px;
+}
+.input-form input:first-child{
+  width: 375px;
+  height: 60px;
+  margin-right: 10px;
+  border: 2px solid rgba(172, 187, 120, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+}
+.input-form input:first-child:hover{
+  border: 2px solid #ACBB78;
+}
+.input-form input:first-child::placeholder{
+  color: rgb(172, 187, 120);
+}
+.input-form input:last-child{
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(172, 187, 120, 0.5);
+  border-radius: 10px;
+  background-color: #fff;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
+}
+.input-form input:last-child:hover{
+  background-color: rgba(172, 187, 120, 0.5);
+  border: none;
+  color: #fff;
+}
+.content{
+  width: 450px;
+  height: 330px;
+  background-color: rgba(172, 187, 120, 0.5);
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.todo-box{
+  margin: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 420px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.todo-box p{
+  width: 350px;
+  color: #649173;
+  font-weight: 500;
+  cursor: pointer;
+}
+.delete{
+  font-size: 20px;
+  color: #C1C1C1;
+}
+.delete:hover{
+  color: #3d5a47;
+  cursor: pointer;
+}
+
+/* mobile */
+@media screen and (max-width: 375px){
+  .container{
+    width: 300px;
+    height: 600px;
+    border-radius: 0;
+  }
+  .title{
+    margin: 27px 80px 40px 80px;
+  }
+  .input-form{
+    margin-bottom: 20px;
+  }
+  .input-form input:first-child{
+    width: 221px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 0;
+  }
+  .input-form input:last-child{
+    width: 44px;
+    height: 44px;
+    border-radius: 0;
+    /* font-size: 20px; */
+  }
+  .content{
+    width: 268px;
+    height: 414px;
+    border-radius: 0;
+  }
+  .todo-box{
+    width: 240px;
+    height: 45px;
+    border-radius: 0;
+  }
+}
