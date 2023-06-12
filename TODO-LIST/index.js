@@ -16,6 +16,14 @@ function saveTodo(){
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos))
 }
 
+// click or keydown
+function handleEvent(event){
+  if (event.type == 'click'){
+    createTodo()
+  }else if (event.type == 'keydown'){
+    createTodo()
+  }
+}
 
 function createTodo(e){
   const todo = inputTodo.value.trim() // 입력 값의 앞뒤 공백 제거
@@ -70,15 +78,8 @@ function deleteTodo(){
   todoBox.parentNode.removeChild(todoBox)
 }
 
-// click or keydown
-// function handleEvent(event){
-//   if (event.type == 'click'){
-//     createTodo()
-//   }else if (event.type == 'keydown'){
-//     createTodo()
-//   }
-// }
+
 // 이벤트 실행
 submitButton.addEventListener('click', createTodo) 
-// inputTodo.addEventListener('keydown', handleKeydown)
+inputTodo.addEventListener('keydown', handleKeydown)
 
