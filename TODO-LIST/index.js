@@ -1,85 +1,64 @@
-// 할 일 추가 : todo-box 클래스 추가
-// 할 일 완료 : 글씨 누르면 line-through
-// 할 일 삭제 : X 누르면 할 일 삭제
-// 유효성 검사 : 아무것도 입력하지 않고 제출한 경우 경고창 뜨기
-// 엔터키 눌렀을 때도 할 일 추가 가능
+const input = document.querySelector('.input-form input:first-child')
+const button = document.querySelector('.input-form input:last-child')
+const box = document.querySelector('.content')
 
-const inputTodo = document.querySelector('.input-form input:first-child')
-const submitButton = document.querySelector('.input-form input:last-child')
-const todoContent = document.querySelector('.content')
-
-const TODOS_KEY = 'todos'
-const toDos = [] 
-function saveTodo(){
-  // 객체나 배열을 문자열로 변환 > 로컬 스토리지는 문자열밖에 저장못함
-  // 배열의 구조와 데이터가 그대로 보존됨
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos))
-}
-
-// click or keydown
+// 키보드 or 버튼 클릭
 function handleEvent(event){
-  if (event.type == 'click'){
-    createTodo()
-  }else if (event.type == 'keydown'){
-    createTodo()
+  if(event.type === 'click'){
+    createTodoList()
+    event.preventDefault()
+  }else if ((event.type === 'keypress') && (event.key === 'Enter')){
+    createTodoList()
+    event.preventDefault()
   }
 }
+// 투두리스트 생성
+function createTodoList(){
+  const todo = input.value.trim()
+  input.value = '' // 초기화
 
-function createTodo(e){
-  const todo = inputTodo.value.trim() // 입력 값의 앞뒤 공백 제거
-  if (todo.length === 0){  // 입력값이 없는데 제출한 경우
-     return alert('할 일을 입력해주세요')
-  }else{
+  if (todo.length === 0){
+    return alert('할 일을 입력하세요')
+  }else{  // input 폼에 할 일을 입력한 후 엔터 또는 버튼을 눌렀을 때, 할 일 생성
     const div = document.createElement('div')
-    div.classList.add('todo-box')
+    div.className = 'todo-box'
 
-    const p = document.createElement('p')
-    p.textContent = todo
+    // 현재 시간을 기준으로 고유 id생성
+    const todoId = 'todo-list-' + Date.now()
+    const checkBox = document.createElement('input')
+    checkBox.type = 'checkbox'
+    checkBox.id = todoId 
+
+    const label = document.createElement('label')
+    label.htmlFor = todoId
+    label.textContent = todo
 
     const span = document.createElement('span')
-    span.classList.add('delete')
+    span.className = 'delete'
     span.textContent = 'X'
 
-    div.append(p, span)
-    todoContent.appendChild(div)
+    box.appendChild(div)
+    div.append(checkBox, label, span)
 
-    inputTodo.value = '' // 할 일 추가후 입력필드 초기화
-
-    // 완료
-    p.addEventListener('click', completeTodo)
-    // 삭제
-    span.addEventListener('click', deleteTodo)
-    p.addEventListener('dblclick', deleteTodo)
-
-    // 로컬 스토리지에 저장
-    toDos.push(todo)
-    saveTodo()
-  } 
-  // handleEvent()
-}
-
-// 엔터키 눌렀을 때
-function handleKeydown(event){
-  if (event.key == 'Enter'){
-    createTodo()
+    // 삭제 이벤트 실행
+    span.addEventListener('click', deleteTodoList)
   }
 }
+// 이벤트 리스너 실행
+button.addEventListener('click', createTodoList)
+input.addEventListener('keypress', handleKeyEvent)
 
-// this 키워드는 직접적으로 대상을 가르킨다!
-// 할 일 완료
-function completeTodo(){
-  this.style.textDecoration = 'line-through'
-} 
-// 할 일 삭제
-function deleteTodo(){
-  
+
+// 할 일 삭제 ('X' 표시 선택시)
+function deleteTodoList(){
+  // this는 span을 가리킨다.
   const todoBox = this.parentNode
-  // event.parentNode는 div
-  todoBox.parentNode.removeChild(todoBox)
+  todoBox.remove()
 }
 
-
-// 이벤트 실행
-submitButton.addEventListener('click', createTodo) 
-inputTodo.addEventListener('keydown', handleKeydown)
-
+// 키보드 이벤트
+function handleKeyEvent(event){
+  if (event.key === 'Enter'){
+    createTodoList()
+  }
+}
