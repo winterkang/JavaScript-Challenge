@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Overpass', sans-serif;
+}
+.main{
+  background-color: rgb(72, 164, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height:  800px;
+  padding: 20%;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  background-color: rgb(214, 214, 214);
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  position: fixed;
+  top: 30px;
+  margin: 10px 0;
+}
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.622);
+  width: 30%;
+  padding: 10px 3px;
+  caret-color: rgb(255, 255, 255);
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.date{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.today-weather{
+  /* 오늘 날씨와 온도 아이콘 */
+  width: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  height: 170px;
+  /* height: calc(45% - 230px); */
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.today-weather span{
+  color: #fff;
+  /* border: 1px solid black; */
+}
+.today-weather span:first-child{
+  width: 80%;
+  height: 100px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.today-weather span:first-child img{
+  width: 100px;
+}
+.today-weather span:nth-of-type(2),
+.today-weather span:last-child{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+}
+.today-weather span:last-child{
+  margin-bottom: 10px;
+}
+.calendar{
+  width: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  height: calc(58% - 200px);
+  top: 400px;
+}
+
+.music{
+  background-color: #fff;
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+}
+.info span{
+  font-size: 13px;
+  color: rgb(172, 172, 172);
+}
+.music img{
+  background-color: rgb(240, 169, 193);
+  width: 90px;
+  height: 90px;
+  margin: 0 15px 0 5px;
+}
+.player span{
+  cursor: pointer;
+  font-size: 30px;
+}
+.player{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}

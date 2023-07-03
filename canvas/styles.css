@@ -1,0 +1,83 @@
+canvas{
+  width: 700;
+  height: 700;
+  border-radius: 10px;
+  background-color: white;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(207, 215, 237);
+}
+#color{
+  width: 40px;
+}
+.color{
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 3px solid #fff;
+}
+.color:hover{
+  transform: scale(1.2);
+}
+.color-chip{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button{
+  width: 50px;
+  height: 50px;
+}
+#btn-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#btn-box input,
+#btn-box button{
+  width: 130px;
+  height: 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #015CC8;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+#btn-box #text{
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+#btn-box #text::placeholder{
+  color: gray;
+}
+#file{
+  display: none;
+}
+.file-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #015CC8;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+#btn-box input:hover,
+#btn-box button:hover,
+.file-label:hover{
+  transform: scale(1.1);
+}
