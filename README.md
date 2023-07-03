@@ -15,5 +15,5 @@ This is a repository for practicing and improving JavaScript skills.
 * [Article preview component](https://github.com/winterkang/JavaScript-Challenge/tree/main/article-preview-component)
 * [Todo-List](https://github.com/winterkang/JavaScript-Challenge/tree/main/TODO-LIST)
 * [Calculator](https://github.com/winterkang/JavaScript-Challenge/tree/main/calculator)
-* [CANVAS]()
+* [CANVAS](https://github.com/winterkang/JavaScript-Challenge/tree/main/canvas)
 </details>
